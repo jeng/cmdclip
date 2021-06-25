@@ -128,8 +128,8 @@ int main(int argc, char **argv){
         if (res == NULL){
 
             //Once ownership is transferred we cannot free the global buffer.
-            //That is why we only free fi set data fails or if we do not have
-            //and data.
+            //We only free the global buffer if SetClipboardData fails or if we
+            //do not have any data.
 
             GlobalFree(globalBuffer);
             ErrorMessage("Push failed");
