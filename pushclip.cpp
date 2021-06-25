@@ -48,7 +48,7 @@ void ErrorMessage(const char *msg){
     #define ERROR_CODE 10
     HANDLE output = GetStdHandle(STD_ERROR_HANDLE);
     char errorCode[ERROR_CODE] = {0};
-    wsprintf(errorCode, "%d\n", GetLastError());
+    wsprintf(errorCode, " %d\n", GetLastError());
     if (output == INVALID_HANDLE_VALUE){
         return;
     }
